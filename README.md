@@ -61,7 +61,19 @@ meme-generator-flask/
 ```
 
 ## 📝 Notes
+- The page auto-refreshes every 15 seconds using the HTML <meta> tag.
+- If the meme API is unavailable, the page may fail to load properly.
 
-   - The page auto-refreshes every 15 seconds using the HTML <meta> tag.
+  Your code:
 
-    - If the meme API is unavailable, the page may fail to load properly.
+- Consumes a REST API (https://meme-api.com/gimme) using requests.get().
+
+- Renders HTML via render_template — which is more like building a traditional web app, not an API.
+
+To build a RESTful API in Python with Flask, you’d typically:
+
+-    Expose endpoints like /api/meme that return JSON, not HTML.
+
+-    Use HTTP methods like GET, POST, PUT, DELETE.
+
+-    Handle data exchange via JSON instead of rendering templates.
